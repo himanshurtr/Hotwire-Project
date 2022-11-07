@@ -1,0 +1,12 @@
+<tr id="user_row_<%= user_all.id %>">
+  <td><%= user_all.name %></td>
+  <td><%= user_all.last_name %></td>
+  <td><%= user_all.address %></td>
+  <td><%= user_all.city %></td>
+  <td><%= user_all.contact_no %></td>
+  <td><%= user_all.state %></td>
+  <td><%= link_to "Show", user_all, class: "btn btn-info", data: { controller: 'user-model' } %>
+    <%= link_to "Edit", edit_user_all_path(user_all), class: "btn btn-info", data: { controller: 'user-model' } %>
+    <%= link_to "Destroy", user_all_path(user_all), data: { turbo_method: :delete, turbo_confirm: "Are you sure u wants to delete" }, class: "btn btn-danger" %>
+  </td>
+</tr>
